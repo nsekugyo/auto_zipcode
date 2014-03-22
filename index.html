@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>サンプル</title>
+<script src="http://ajaxzip3.googlecode.com/svn/trunk/ajaxzip3/ajaxzip3.js" charset="UTF-8"></script>
+</head>
+
+<body>
+	<p>【1】1ボックスで郵便番号7桁を入力させる場合の設定例（都道府県と以降の住所を分ける場合）
+	</p>
+	<br />
+	
+	※勝手に郵便番号を入れると住所が出てきます。<br />
+	▼郵便番号<br />
+	<input type="text" name="zip01" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','pref01','addr01');">
+	<br />▼都道府県<br />
+	<input type="text" name="pref01" size="20">
+	<br />▼住所<br />
+	<input type="text" name="addr01" size="60">
+	
+	<br /><br />
+	<p>【2】1ボックスで郵便番号7桁を入力させる場合の設定例（都道府県と以降の住所を分けない場合）</p>
+	<br />
+	※勝手に郵便番号を入れると住所が出てきます。<br />
+	▼郵便番号<br />
+	<input type="text" name="zip11" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');">
+	<br />▼住所<br />
+	<input type="text" name="addr11" size="60">
+	<br /><br />
+	
+	<p>【3】2ボックスで郵便番号を3桁-4桁形式で入力させる場合の設定例</p>
+	<br />
+	※勝手に郵便番号を入れると住所が出てきます。<br />
+	▼郵便番号<br />
+	<input type="text" name="zip21" size="4" maxlength="3"> － <input type="text" name="zip22" size="5" maxlength="4" onKeyUp="AjaxZip3.zip2addr('zip21','zip22','pref21','addr21','strt21');">
+	<br />▼都道府県<br />
+	<input type="text" name="pref21" size="40">
+	<br />▼住所1<br />
+	<input type="text" name="addr21" size="40">
+	<br />▼住所2<br />
+	<input type="text" name="strt21" size="40">
+	
+</body>
+</html>
